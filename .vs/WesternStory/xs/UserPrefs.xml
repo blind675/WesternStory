@@ -1,7 +1,10 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemPickupHealth.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="42" Column="32" />
+      <File FileName="Assets/Scripts/ItemPickup.cs" Line="6" Column="1" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/ItemPickupHealth.cs" Line="16" Column="38" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -9,17 +12,22 @@
           <Node name="WesternStory" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="PlayerController.cs" selected="True" />
+                <Node name="ItemPickupHealth.cs" selected="True" />
               </Node>
             </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="WesternStory" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6cf00e55-dafd-4e42-98f3-cde162a767b4" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6951fafa-91a8-42f3-ab87-1f81e737a047" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -37,5 +37,7 @@ public class PlayerController : MonoBehaviour {
 		if (InputManager.fire) {
 			//Debug.Log ("Move foreward");
 		}
+
+		characterController.SimpleMove (playerTransform.up * -1);
 	}
 }

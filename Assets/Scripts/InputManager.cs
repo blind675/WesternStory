@@ -13,11 +13,15 @@ public class InputManager : MonoBehaviour {
 
 	public void StartMoveForward ()
 	{
+		Debug.Log ("Move Foreward");
+
 		moveForward = true;
 	}
 
 	public void StopMoveForward ()
 	{
+		Debug.Log ("Stop Move Foreward");
+
 		moveForward = false;
 	}
 
