@@ -34,10 +34,6 @@ public class PlayerController : MonoBehaviour {
 			playerTransform.Rotate (playerTransform.up, -1);
 		}
 
-		if (InputManager.fire) {
-			//Debug.Log ("Move foreward");
-		}
-
 		characterController.SimpleMove (playerTransform.up * -1);
 	}
 }
