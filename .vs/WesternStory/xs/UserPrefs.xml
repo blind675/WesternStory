@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WeaponFire.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
     <Files>
       <File FileName="Assets/Scripts/ItemPickup.cs" Line="29" Column="3" />
-      <File FileName="Assets/Scripts/UIController.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/WeaponPickup.cs" Line="34" Column="18" />
-      <File FileName="Assets/Scripts/WeaponsController.cs" Line="7" Column="6" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="33" Column="57" />
-      <File FileName="Assets/Scripts/WeaponFire.cs" Line="21" Column="59" />
+      <File FileName="Assets/Scripts/UIController.cs" />
+      <File FileName="Assets/Scripts/WeaponPickup.cs" />
+      <File FileName="Assets/Scripts/WeaponsController.cs" />
+      <File FileName="Assets/Scripts/PlayerController.cs" />
+      <File FileName="Assets/Scripts/WeaponFire.cs" Line="46" Column="31" />
+      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="24" Column="42" />
+      <File FileName="Assets/Scripts/Enemy.cs" Line="12" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="WesternStory" expanded="True" selected="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="WesternStory" expanded="True" selected="True" />
+          <Node name="WesternStory" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Enemy.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6951fafa-91a8-42f3-ab87-1f81e737a047" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="007299df-3c53-4d7d-a722-d84bde6cc55f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
