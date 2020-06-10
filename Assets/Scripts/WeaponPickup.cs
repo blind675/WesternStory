@@ -20,26 +20,27 @@ public class WeaponPickup : MonoBehaviour {
 
 	private bool _willDestroy = false;
 
-	private void OnTriggerEnter (Collider other)
+	private void OnTriggerEnter (Collider collider)
 	{
-		if (!_willDestroy) {
-			_willDestroy = true;
+		if (collider.transform.tag == "Player") {
+			if (!_willDestroy) {
+				_willDestroy = true;
 
-			KnifeUI.SetActive (PickingUpKnife);
-			GunUI.SetActive (PickingUpGun);
-			DoubleGunUI.SetActive (PickingUpDoubleGun);
+				KnifeUI.SetActive (PickingUpKnife);
+				GunUI.SetActive (PickingUpGun);
+				DoubleGunUI.SetActive (PickingUpDoubleGun);
 
-			KnifeUIHUD.SetActive (PickingUpKnife);
-			GunUIHUD.SetActive (PickingUpGun);
-			DoubleGunUIHUD.SetActive (PickingUpDoubleGun);
+				KnifeUIHUD.SetActive (PickingUpKnife);
+				GunUIHUD.SetActive (PickingUpGun);
+				DoubleGunUIHUD.SetActive (PickingUpDoubleGun);
 
-			if (SoundFX) SoundFX.Play ();
+				if (SoundFX) SoundFX.Play ();
 
-			GameObject spriteGameObject = transform.GetChild (0).gameObject;
-			spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
+				GameObject spriteGameObject = transform.GetChild (0).gameObject;
+				spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
 
-			Destroy (gameObject, 0.3f);
+				Destroy (gameObject, 0.3f);
+			}
 		}
-
 	}
 }

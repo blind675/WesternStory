@@ -8,19 +8,21 @@ public class ItemPickupHealth : MonoBehaviour {
 
 	private bool _willDestroy = false;
 
-	private void OnTriggerEnter (Collider other)
+	private void OnTriggerEnter (Collider collider)
 	{
-		if (!_willDestroy) {
+		if (collider.transform.tag == "Player") {
+			if (!_willDestroy) {
 
-			if (PlayerHealth.AddHealth (Health)) {
-				_willDestroy = true;
+				if (PlayerHealth.AddHealth (Health)) {
+					_willDestroy = true;
 
-				GameObject spriteGameObject = transform.GetChild (0).gameObject;
-				spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
+					GameObject spriteGameObject = transform.GetChild (0).gameObject;
+					spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
 
-				Destroy (gameObject, 0.3f);
+					Destroy (gameObject, 0.3f);
+				}
+
 			}
-
 		}
 
 	}

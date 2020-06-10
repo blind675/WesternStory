@@ -11,19 +11,21 @@ public class ItemPickup : MonoBehaviour {
 
 	private bool _willDestroy = false;
 
-	private void OnTriggerEnter (Collider other)
+	private void OnTriggerEnter (Collider collider)
 	{
-		if (!_willDestroy) {
-			_willDestroy = true;
-			PlayerInventory.AddAmmo (Ammo);
-			PlayerInventory.Money += Money;
+		if (collider.transform.tag == "Player") {
+			if (!_willDestroy) {
+				_willDestroy = true;
+				PlayerInventory.AddAmmo (Ammo);
+				PlayerInventory.Money += Money;
 
-			if (SoundFX) SoundFX.Play ();
+				if (SoundFX) SoundFX.Play ();
 
-			GameObject spriteGameObject = transform.GetChild (0).gameObject;
-			spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
+				GameObject spriteGameObject = transform.GetChild (0).gameObject;
+				spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
 
-			Destroy (gameObject, 0.3f);
+				Destroy (gameObject, 0.3f);
+			}
 		}
 
 	}
