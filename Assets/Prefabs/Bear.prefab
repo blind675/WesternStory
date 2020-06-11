@@ -369,12 +369,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateDistance: 10
-  attackDistance: 1.5
+  attackDistance: 2
   attackDamage: 10
   health: 10
   moveSpeed: 0.02
   enemyHitFX: {fileID: 6986478917900807425}
   enemyAttackFX: {fileID: 6986478917341299539}
+  deathPrefab: {fileID: 6263180082120892934, guid: e489ba34bcb0b4ad1ab80e5ddf0413e5,
+    type: 3}
   targetDistance: 0
 --- !u!1 &6986478917900807431
 GameObject:
