@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 6986478917412859441}
   m_Layer: 0
   m_Name: Bear Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,6 +375,7 @@ MonoBehaviour:
   moveSpeed: 0.02
   enemyHitFX: {fileID: 6986478917900807425}
   enemyAttackFX: {fileID: 6986478917341299539}
+  deathPrefab: {fileID: 0}
   targetDistance: 0
 --- !u!1 &6986478917900807431
 GameObject:

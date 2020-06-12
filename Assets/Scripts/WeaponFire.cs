@@ -23,8 +23,7 @@ public class WeaponFire : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-
-		if (!weaponInCoolDown) {
+		if (!weaponInCoolDown && !PlayerController.interactionEnabled) {
 			if (InputManager.fire || Input.GetKey (KeyCode.LeftAlt)) {
 
 				if (PlayerInventory.Ammo == 0 && !knife) {

@@ -1,11 +1,15 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Enemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Door.cs">
     <Files>
-      <File FileName="Assets/Scripts/WeaponFire.cs" Line="65" Column="50" />
-      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="24" Column="19" />
+      <File FileName="Assets/Scripts/WeaponFire.cs" Line="26" Column="29" />
+      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="24" Column="28" />
       <File FileName="Assets/Scripts/Enemy.cs" Line="97" Column="21" />
       <File FileName="Assets/Scripts/WeaponPickup.cs" Line="25" Column="41" />
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="45" Column="76" />
+      <File FileName="Assets/Scripts/WeaponsController.cs" Line="12" Column="29" />
+      <File FileName="Assets/Scripts/NPC.cs" Line="5" Column="17" />
+      <File FileName="Assets/Scripts/Door.cs" Line="19" Column="8" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,7 +17,7 @@
           <Node name="WesternStory" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Enemy.cs" selected="True" />
+                <Node name="Door.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -23,6 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9a376f58-588a-4b62-94a3-8cfa1c327b67" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
