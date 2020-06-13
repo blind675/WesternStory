@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform playerTransform;
 	public CharacterController characterController;
 	public GameObject infoText;
+	public StoryController storyController;
 
 	//public WeaponFire knifeUIObject;
 	//public WeaponFire gunUIObject;
@@ -39,20 +40,32 @@ public class PlayerController : MonoBehaviour {
 				//focusedEnemy = Shot.transform;
 				// nothing here WeaponFire will take care
 			} else if (Shot.transform.tag == "NPC" && targetDistance < maxInteractionDistance) {
-				string NPCName = Shot.collider.gameObject.GetComponent<NPC> ().characterName;
+				NPC npc = Shot.collider.gameObject.GetComponent<NPC> ();
 
-				infoText.GetComponent<Text> ().color = Color.black;
-				infoText.GetComponent<Text> ().text = "Press button talk to " + NPCName;
-				infoText.SetActive (true);
-				focusedNPC = Shot.transform;
-				interactionEnabled = true;
+				Debug.Log ("NPC: " + npc.NPCName);
+				Debug.Log ("Story index: " + StoryController.storyStepIndex);
+
+				if (storyController.CanTalkToNPC (npc.NPCName)) {
+					string NPCInfoText = npc.interractionInfoText;
+					infoText.GetComponent<Text> ().color = Color.gray;
+					infoText.GetComponent<Text> ().text = NPCInfoText;
+					infoText.SetActive (true);
+					focusedNPC = Shot.transform;
+					interactionEnabled = true;
+				}
 
 			} else if (Shot.transform.tag == "Door" && targetDistance < maxInteractionDistance) {
-				infoText.GetComponent<Text> ().color = Color.white;
-				infoText.GetComponent<Text> ().text = "Press button to Open Door";
 				infoText.SetActive (true);
-				focusedDoor = Shot.transform;
-				interactionEnabled = true;
+
+				if (storyController.CanOpenDoor ()) {
+					infoText.GetComponent<Text> ().color = Color.white;
+					infoText.GetComponent<Text> ().text = "Press button to Open Door";
+					focusedDoor = Shot.transform;
+					interactionEnabled = true;
+				} else {
+					infoText.GetComponent<Text> ().color = Color.red;
+					infoText.GetComponent<Text> ().text = "Read Letter First";
+				}
 
 			} else {
 				infoText.SetActive (false);
@@ -84,13 +97,14 @@ public class PlayerController : MonoBehaviour {
 
 		// player attack and interactions
 		if (InputManager.fire || Input.GetKey (KeyCode.LeftAlt)) {
-
 			if (focusedDoor) {
 				// open door animation on focusedDoor game object
 				focusedDoor.SendMessage ("OpenDoor", SendMessageOptions.DontRequireReceiver);
 			} else if (focusedNPC) {
-				// TODO: start npc dialog with focusedNPC
-				Debug.Log ("- talk to ( how will i get the name ) ?? ");
+				// start npc dialog with focusedNPC
+				InputManager.fire = false;
+				NPC selectedNPC = Shot.collider.gameObject.GetComponent<NPC> ();
+				storyController.talkToNPC (selectedNPC);
 			} else {
 				// FIXME: nothing here WeaponFire will take care
 

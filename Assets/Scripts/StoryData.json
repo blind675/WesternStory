@@ -1,0 +1,61 @@
+﻿{
+  "stroySteps": [
+  {
+    "SceneLock": true,
+    "CurrentScene": "Town",
+    "NextStory": "Letter",
+    "Letter": [
+      "PLAYER- My mother went away but she left a letter, I should read it.",
+      "NPM- Hi, I left for some weeks, dunno why. Please visit Mary, your fiance, she has something to ask of you."
+    ]
+  },
+  {
+    "SceneLock": true,
+    "CurrentScene": "Town",
+    "NextStory": "Mary",
+    "Mary": [
+      "NPC- My lovely husband to be, I’m so glad you came. I lost Daisy, my cow since I was little! We cannot get married without her at the ceremony.",
+      "NPC- Can you find her for me? She usually hangs around the bear cave outside town. I really hope she’s ok.",
+      "PLAYER- Yes mam, I’ll gladly bring Betsy back."
+    ],
+    "Sheriff": [
+      "NPC- Hi Bob. Nice day ain’t it? I hard Mary is looking for ya. You should see what that’s about."
+    ],
+    "GunSmith": [
+      "NPC- Howdy. Want a new gun. We have all you need for the right price."
+    ]
+  },
+  {
+    "SceneLock": false,
+    "CurrentScene": "Town",
+    "NextScene": "BearCave",
+    "NextStory": "Scene",
+    "Mary": [
+      "NPC- Please find my cow Daisy, we cannot get married without her. Search outside town."
+    ],
+    "Sheriff": [
+      "NPC- You should find that damn cow if you ever get married. Maybe, also, get a new gun."
+    ],
+    "GunSmith": [
+      "NPC- Howdy. Want a new gun. We have all you need for the right price."
+    ]
+  },
+  {
+    "SceneLock": false,
+    "CurrentScene": "BearCave",
+    "NextScene": "Town",
+    "NextStory": "Daisy",
+    "PrevStory": "Scene",
+    "Daisy": [
+      "PLAYER- Daisy, here you are! Let's get home so I can finaly marry Mary.",
+      "NPC- Moooo!"
+      ]
+  },
+  {
+    "SceneLock": false,
+    "CurrentScene": "BearCave",
+    "NextScene": "Town",
+    "NextStory": "Scene"
+  }
+]
+}

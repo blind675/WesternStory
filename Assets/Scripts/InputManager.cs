@@ -10,18 +10,15 @@ public class InputManager : MonoBehaviour {
 	public static bool rotateCW;
 	public static bool fire;
 
+	// TODO: move all the keyboard press events here
 
 	public void StartMoveForward ()
 	{
-		Debug.Log ("Move Foreward");
-
 		moveForward = true;
 	}
 
 	public void StopMoveForward ()
 	{
-		Debug.Log ("Stop Move Foreward");
-
 		moveForward = false;
 	}
 
@@ -57,11 +54,14 @@ public class InputManager : MonoBehaviour {
 
 	public void StartFire ()
 	{
+		//Debug.Log ("Start Fire");
 		fire = true;
 	}
 
 	public void StopFire ()
 	{
+		//Debug.Log ("Stop Fire");
 		fire = false;
 	}
+
 }
