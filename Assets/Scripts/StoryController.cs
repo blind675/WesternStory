@@ -88,12 +88,11 @@ public class StoryController : MonoBehaviour {
 			// close dialog canvas
 			mainCanvas.SetActive (true);
 			storyCanvas.SetActive (false);
+			conversationLineIndex = 0;
 
 			// evolve story if possible
 			if (NPC.NPCName == stroy.stroySteps [storyStepIndex].NextStoryTrigger) {
 				//Debug.Log ("- next story step");
-
-				conversationLineIndex = 0;
 				storyStepIndex++;
 			}
 
@@ -113,10 +112,11 @@ public class StoryController : MonoBehaviour {
 				DialogLine.text = nextDialogLine;
 				DialogImage.sprite = NPC.NPCPicture;
 			}
+
+			// increment the dialog index
+			conversationLineIndex++;
 		}
 
-		// increment the dialog index
-		conversationLineIndex++;
 	}
 
 	private string GetLineOfConversation (string npcName)
