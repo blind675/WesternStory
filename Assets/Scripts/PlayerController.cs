@@ -36,7 +36,19 @@ public class PlayerController : MonoBehaviour {
 		if (Physics.Raycast (transform.position, transform.TransformDirection (Vector3.forward), out Shot)) {
 			targetDistance = Shot.distance;
 
-			if (Shot.transform.tag == "Enemy") {
+			if (Shot.transform.tag == "Weapon") {
+				int weaponCost = Shot.collider.gameObject.GetComponent<Weapon> ().cost;
+
+				infoText.SetActive (true);
+
+				if (weaponCost <= PlayerInventory.Money) {
+					infoText.GetComponent<Text> ().color = Color.gray;
+					infoText.GetComponent<Text> ().text = "Walk Over To Buy Weapon";
+				} else {
+					infoText.GetComponent<Text> ().color = Color.red;
+					infoText.GetComponent<Text> ().text = "You don't have enough Money";
+				}
+
 				//focusedEnemy = Shot.transform;
 				// nothing here WeaponFire will take care
 			} else if (Shot.transform.tag == "NPC" && targetDistance < maxInteractionDistance) {

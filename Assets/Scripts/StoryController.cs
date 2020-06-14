@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class StoryController : MonoBehaviour {
 
@@ -20,7 +21,7 @@ public class StoryController : MonoBehaviour {
 	private int conversationLineIndex = 0;
 	private NPC NPC;
 
-	private static string storyJSONString = "{\"stroySteps\":[{\"SceneLock\":true,\"CurrentScene\":\"Town\",\"NextStoryTrigger\":\"Letter\",\"Letter\":[\"PLAYER- My mother went away but she left a letter, I should read it.\",\"Dear Bob, I`ve gone to your grandma for two months. I`ll be back in time for your wedding. Please visit Mary, your fiance, she has something to ask of you.\"]},{\"SceneLock\":true,\"CurrentScene\":\"Town\",\"NextStoryTrigger\":\"Mary\",\"Mary\":[\"My lovely husband to be, I`m so glad you came. I lost Daisy, my cow ever since I was little! We cannot get married without her at the ceremony.\",\"Can you find her for me? She usually hangs around the bear cave outside town. I really hope she`s ok.\",\"PLAYER- Yes mam, I`ll gladly bring Betsy back.\"],\"Sheriff\":[\"Hi Bob. Nice day ain`t it? I hard Mary is looking for ya. You should see what that`s about.\"],\"GunSmith\":[\"Howdy. Want a new gun. We have all you need for the right price.\"]},{\"SceneLock\":false,\"CurrentScene\":\"Town\",\"NextScene\":\"BearCave\",\"NextStoryTrigger\":\"Scene\",\"Mary\":[\"Please find my cow Daisy, we cannot get married without her. Search outside town.\"],\"Sheriff\":[\"You should find that damn cow if you ever get married. Maybe, also, get a new gun.\"],\"GunSmith\":[\"Howdy. Want a new gun. We have all you need for the right price.\"]},{\"SceneLock\":false,\"CurrentScene\":\"BearCave\",\"NextScene\":\"Town\",\"NextStoryTrigger\":\"Daisy\",\"PrevStoryTrigger\":\"Scene\",\"Daisy\":[\"PLAYER- Daisy, here you are! Let`s get home so I can finally marry Mary.\",\"Moooo!\"]},{\"SceneLock\":false,\"CurrentScene\":\"BearCave\",\"NextScene\":\"Town\",\"NextStoryTrigger\":\"Scene\"}]}";
+	private static string storyJSONString = "{\"stroySteps\":[{\"SceneLock\":true,\"CurrentScene\":\"TownScene\",\"NextStoryTrigger\":\"Letter\",\"Letter\":[\"PLAYER- My mother went away but she left a letter, I should read it.\",\"Dear Bob, I`ve gone to your grandma for two months. I`ll be back in time for your wedding. Please visit Mary, your fiance, she has something to ask of you.\"]},{\"SceneLock\":true,\"CurrentScene\":\"TownScene\",\"NextStoryTrigger\":\"Mary\",\"Mary\":[\"My lovely husband to be, I`m so glad you came. I lost Daisy, my cow ever since I was little! We cannot get married without her at the ceremony.\",\"Can you find her for me? She usually hangs around the bear cave outside town. I really hope she`s ok.\",\"PLAYER- Yes mam, I`ll gladly bring Betsy back.\"],\"Sheriff\":[\"Hi Bob. Nice day ain`t it? I hard Mary is looking for ya. You should see what that`s about.\"],\"GunSmith\":[\"Howdy. Want a new gun. We have all you need for the right price. The Ammo is free.\"]},{\"SceneLock\":false,\"CurrentScene\":\"TownScene\",\"NextScene\":\"CaveScene\",\"NextStoryTrigger\":\"Scene\",\"Mary\":[\"Please find my cow Daisy, we cannot get married without her. Search outside town.\"],\"Sheriff\":[\"You should find that damn cow if you ever get married. Maybe, also, get a new gun.\"],\"GunSmith\":[\"Howdy. Want a new gun. We have all you need for the right price. The Ammo is free.\"]},{\"SceneLock\":false,\"CurrentScene\":\"CaveScene\",\"NextScene\":\"TownScene\",\"NextStoryTrigger\":\"Daisy\",\"PrevStoryTrigger\":\"Scene\",\"Daisy\":[\"PLAYER- Daisy, here you are! Let`s get home so I can finally marry Mary.\",\"Moooo!\"]},{\"SceneLock\":false,\"CurrentScene\":\"CaveScene\",\"NextScene\":\"TownScene\",\"NextStoryTrigger\":\"Scene\"}]}";
 
 	private static StorySteps stroy;
 
@@ -53,7 +54,64 @@ public class StoryController : MonoBehaviour {
 
 	public static bool CanLeaveScene ()
 	{
-		return stroy.stroySteps [storyStepIndex].SceneLock;
+		return !stroy.stroySteps [storyStepIndex].SceneLock;
+	}
+
+	public static void GoToNextScene ()
+	{
+		//Debug.Log (" - STORY - storyStepIndex: " + storyStepIndex);
+		//Debug.Log (" - STORY - objectt: " + JsonUtility.ToJson (stroy.stroySteps [storyStepIndex], true));
+
+		// Might be redundant check
+		if (stroy.stroySteps [storyStepIndex].NextScene != SceneManager.GetActiveScene ().name) {
+
+			// change scene
+			SceneManager.LoadScene (stroy.stroySteps [storyStepIndex].NextScene);
+
+			if (stroy.stroySteps [storyStepIndex].NextStoryTrigger == "Scene") {
+				storyStepIndex++;
+			} else if (stroy.stroySteps [storyStepIndex].PrevStoryTrigger == "Scene") {
+				storyStepIndex--;
+			}
+
+		}
+	}
+
+	public static string GetTriggerNPCName ()
+	{
+		return stroy.stroySteps [storyStepIndex].NextStoryTrigger;
+	}
+
+	public static bool IsNPCInScene (NPC npc)
+	{
+		if (storyStepIndex == 0) return true;
+
+		StoryStep currentStoryStep = stroy.stroySteps [storyStepIndex];
+
+		switch (npc.NPCName) {
+
+		case "Letter":
+			if (currentStoryStep.Letter == null) return false;
+			break;
+		case "Mary":
+			if (currentStoryStep.Mary == null) return false;
+			break;
+		case "Sheriff":
+			if (currentStoryStep.Sheriff == null) return false;
+			break;
+		case "GunSmith":
+			if (currentStoryStep.GunSmith == null) return false;
+			break;
+		case "Daisy":
+			if (currentStoryStep.Daisy == null) return false;
+			break;
+		case "Joe":
+			if (currentStoryStep.Joe == null) return false;
+			break;
+		}
+
+		return true;
+
 	}
 
 	public void Click ()

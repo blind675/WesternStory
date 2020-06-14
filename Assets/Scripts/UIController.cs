@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		// TODO: set scene name correct
 		LocationText.text = "Town";
 		MoneyText.text = "$" + PlayerInventory.Money;
 		HealthText.text = "" + PlayerHealth.Health + "%";

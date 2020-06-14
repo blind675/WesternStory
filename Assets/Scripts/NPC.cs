@@ -7,4 +7,10 @@ public class NPC : MonoBehaviour {
 	public string NPCName;
 	public Sprite NPCPicture;
 
+	private void Start ()
+	{
+		if (!StoryController.IsNPCInScene (this)) {
+			Destroy (gameObject);
+		}
+	}
 }

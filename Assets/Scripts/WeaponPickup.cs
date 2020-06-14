@@ -22,9 +22,11 @@ public class WeaponPickup : MonoBehaviour {
 
 	private void OnTriggerEnter (Collider collider)
 	{
-		if (collider.transform.tag == "Player") {
+		if (collider.transform.tag == "Player" && transform.GetComponent<Weapon> ().cost <= PlayerInventory.Money) {
 			if (!_willDestroy) {
 				_willDestroy = true;
+
+				PlayerInventory.Money -= transform.GetComponent<Weapon> ().cost;
 
 				KnifeUI.SetActive (PickingUpKnife);
 				GunUI.SetActive (PickingUpGun);
@@ -38,6 +40,21 @@ public class WeaponPickup : MonoBehaviour {
 
 				GameObject spriteGameObject = transform.GetChild (0).gameObject;
 				spriteGameObject.GetComponent<SpriteRenderer> ().enabled = false;
+
+				if (PickingUpKnife) {
+					WeaponsController.hasKnife = true;
+					WeaponsController.isKnifeEquiped = true;
+				}
+
+				if (PickingUpGun) {
+					WeaponsController.hasGun = true;
+					WeaponsController.isGunEquiped = true;
+				}
+
+				if (PickingUpDoubleGun) {
+					WeaponsController.hasDoubleGun = true;
+					WeaponsController.isDoubleGunEquiped = true;
+				}
 
 				Destroy (gameObject, 0.3f);
 			}

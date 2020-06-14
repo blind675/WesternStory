@@ -202,5 +202,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ammo: 0
-  Money: 20
+  Money: 10
   SoundFX: {fileID: 0}
