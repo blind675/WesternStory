@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInventory : MonoBehaviour {
 
 	public static int Ammo = 0;
-	public static int Money = 0;
+	public static int Money = 200;
 	public static int Score = 0;
 
 	public static void AddAmmo (int ammo)

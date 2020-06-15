@@ -13,4 +13,68 @@ public class WeaponsController : MonoBehaviour {
 	public static bool isGunEquiped = false;
 	public static bool isDoubleGunEquiped = false;
 
+	public GameObject KnifeUI;
+	public GameObject GunUI;
+	public GameObject DoubleGunUI;
+
+	public GameObject KnifeUIHUD;
+	public GameObject GunUIHUD;
+	public GameObject DoubleGunUIHUD;
+
+	public GameObject SwitchWeaponButton;
+
+	private void Start ()
+	{
+		ShowCurrentlyEquipedWeapon ();
+	}
+
+	private void Update ()
+	{
+		if (hasKnife || hasGun || hasDoubleGun) {
+			SwitchWeaponButton.SetActive (true);
+		}
+	}
+
+	private void ShowCurrentlyEquipedWeapon ()
+	{
+		KnifeUI.SetActive (isKnifeEquiped);
+		GunUI.SetActive (isGunEquiped);
+		DoubleGunUI.SetActive (isDoubleGunEquiped);
+
+		KnifeUIHUD.SetActive (isKnifeEquiped);
+		GunUIHUD.SetActive (isGunEquiped);
+		DoubleGunUIHUD.SetActive (isDoubleGunEquiped);
+	}
+
+	public void SwitchToNextWeapon ()
+	{
+		if (isKnifeEquiped) {
+			if (hasGun) {
+				isGunEquiped = true;
+				isKnifeEquiped = false;
+			} else if (hasDoubleGun) {
+				isDoubleGunEquiped = true;
+				isKnifeEquiped = false;
+			}
+		} else if (isGunEquiped) {
+			if (hasDoubleGun) {
+				isDoubleGunEquiped = true;
+				isGunEquiped = false;
+			} else if (hasKnife) {
+				isKnifeEquiped = true;
+				isGunEquiped = false;
+			}
+		} else if (isDoubleGunEquiped) {
+			if (hasKnife) {
+				isKnifeEquiped = true;
+				isDoubleGunEquiped = false;
+			} else if (hasGun) {
+				isGunEquiped = true;
+				isDoubleGunEquiped = false;
+			}
+		}
+
+		ShowCurrentlyEquipedWeapon ();
+	}
+
 }

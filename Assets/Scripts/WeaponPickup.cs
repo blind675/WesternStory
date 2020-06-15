@@ -43,18 +43,19 @@ public class WeaponPickup : MonoBehaviour {
 
 				if (PickingUpKnife) {
 					WeaponsController.hasKnife = true;
-					WeaponsController.isKnifeEquiped = true;
 				}
 
 				if (PickingUpGun) {
 					WeaponsController.hasGun = true;
-					WeaponsController.isGunEquiped = true;
 				}
 
 				if (PickingUpDoubleGun) {
 					WeaponsController.hasDoubleGun = true;
-					WeaponsController.isDoubleGunEquiped = true;
 				}
+
+				WeaponsController.isKnifeEquiped = PickingUpKnife;
+				WeaponsController.isGunEquiped = PickingUpGun;
+				WeaponsController.isDoubleGunEquiped = PickingUpDoubleGun;
 
 				Destroy (gameObject, 0.3f);
 			}
