@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour {
 
 	private Transform focusedDoor;
 	private Transform focusedNPC;
-	private Transform focusedEnemy;
 
 	// Update is called once per frame
 	void Update ()
@@ -54,8 +53,8 @@ public class PlayerController : MonoBehaviour {
 			} else if (Shot.transform.tag == "NPC" && targetDistance < maxInteractionDistance) {
 				NPC npc = Shot.collider.gameObject.GetComponent<NPC> ();
 
-				Debug.Log ("NPC: " + npc.NPCName);
-				Debug.Log ("Story index: " + StoryController.storyStepIndex);
+				//Debug.Log ("NPC: " + npc.NPCName);
+				//Debug.Log ("Story index: " + StoryController.storyStepIndex);
 
 				if (storyController.CanTalkToNPC (npc.NPCName)) {
 					string NPCInfoText = npc.interractionInfoText;
@@ -83,7 +82,6 @@ public class PlayerController : MonoBehaviour {
 				infoText.SetActive (false);
 				focusedDoor = null;
 				focusedNPC = null;
-				focusedEnemy = null;
 				interactionEnabled = false;
 			}
 		}

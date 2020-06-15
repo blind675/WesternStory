@@ -33,7 +33,7 @@ public class StoryController : MonoBehaviour {
 	public bool CanTalkToNPC (string npcName)
 	{
 		string nextLine = GetLineOfConversation (npcName);
-		Debug.Log ("- next dialog Line : " + nextLine);
+		//Debug.Log ("- next dialog Line : " + nextLine);
 
 		if (nextLine == null) {
 			return false;
