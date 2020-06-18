@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/StoryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WeaponsController.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerController.cs" Line="84" Column="23" />
-      <File FileName="Assets/Scripts/WeaponsController.cs" Line="79" Column="1" />
+      <File FileName="Assets/Scripts/WeaponsController.cs" Line="10" Column="41" />
       <File FileName="Assets/Scripts/StoryController.cs" Line="24" Column="2748" />
       <File FileName="Assets/Scripts/UIController.cs" />
-      <File FileName="Assets/Scripts/PlayerInventory.cs" />
+      <File FileName="Assets/Scripts/PlayerInventory.cs" Line="7" Column="29" />
       <File FileName="Assets/Scripts/WeaponPickup.cs" />
       <File FileName="Assets/Scripts/InputManager.cs" />
     </Files>
@@ -16,7 +16,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Assets" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="StoryController.cs" selected="True" />
+                <Node name="WeaponsController.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f898da4c-d088-4819-994e-2c983102feb8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3fa195a1-585f-4c6c-8ce7-19a49c94731e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

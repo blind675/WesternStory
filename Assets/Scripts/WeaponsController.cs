@@ -7,11 +7,11 @@ public class WeaponsController : MonoBehaviour {
 	// used for weapon switching
 	public static bool hasKnife = false;
 	public static bool hasGun = false;
-	public static bool hasDoubleGun = false;
+	public static bool hasDoubleGun = true;
 
 	public static bool isKnifeEquiped = false;
 	public static bool isGunEquiped = false;
-	public static bool isDoubleGunEquiped = false;
+	public static bool isDoubleGunEquiped = true;
 
 	public GameObject KnifeUI;
 	public GameObject GunUI;
