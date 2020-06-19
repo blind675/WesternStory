@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class LeaveScene : MonoBehaviour {
 
 	public GameObject infoText;
+	public StoryController storyController;
 
 	private void OnTriggerEnter (Collider other)
 	{
 		if (WeaponsController.hasKnife || WeaponsController.hasGun || WeaponsController.hasDoubleGun) {
 			if (StoryController.CanLeaveScene ()) {
 
-				StoryController.GoToNextScene ();
+				storyController.GoToNextScene ();
+
 			} else {
 				infoText.SetActive (true);
 				infoText.GetComponent<Text> ().text = "Can't leave yet. Talk to " + StoryController.GetTriggerNPCName ();

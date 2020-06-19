@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour {
 				// start npc dialog with focusedNPC
 				InputManager.fire = false;
 				NPC selectedNPC = Shot.collider.gameObject.GetComponent<NPC> ();
-				storyController.talkToNPC (selectedNPC);
+				storyController.TalkToNPC (selectedNPC);
 			} else {
 				// FIXME: nothing here WeaponFire will take care
 

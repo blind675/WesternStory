@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BanditScene.unity
     guid: aba0c3b46da444013a1d75c876e4b974
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 1956cf26005d44e9f88b7fee7a41fd02
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: efe3ea9ae5d864472a2798e9a7c5bf29
   m_configObjects: {}

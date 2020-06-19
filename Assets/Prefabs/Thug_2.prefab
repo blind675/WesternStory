@@ -368,11 +368,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78f6a8f6fec74143994a8836fbb5bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateDistance: 15
-  attackDistance: 5
-  attackDamage: 20
-  health: 16
-  moveSpeed: 0.05
+  activateDistance: 12
+  attackDistance: 7
+  attackDamage: 5
+  health: 6
+  moveSpeed: 0.03
   enemyHitFX: {fileID: 6986478917900807425}
   enemyAttackFX: {fileID: 6986478917341299539}
   deathPrefab: {fileID: 5339973494844239658, guid: 72c3f446a013b4dfabe4e43c1936e0af,

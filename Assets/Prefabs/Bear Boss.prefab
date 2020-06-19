@@ -368,9 +368,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78f6a8f6fec74143994a8836fbb5bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activateDistance: 10
-  attackDistance: 2
-  attackDamage: 20
+  activateDistance: 12
+  attackDistance: 1.8
+  attackDamage: 10
   health: 12
   moveSpeed: 0.02
   enemyHitFX: {fileID: 6986478917900807425}

@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/WeaponsController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BackToMenuScene.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="84" Column="23" />
-      <File FileName="Assets/Scripts/WeaponsController.cs" Line="10" Column="41" />
-      <File FileName="Assets/Scripts/StoryController.cs" Line="24" Column="2748" />
-      <File FileName="Assets/Scripts/UIController.cs" />
-      <File FileName="Assets/Scripts/PlayerInventory.cs" Line="7" Column="29" />
-      <File FileName="Assets/Scripts/WeaponPickup.cs" />
-      <File FileName="Assets/Scripts/InputManager.cs" />
+      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="28" Column="38" />
+      <File FileName="Assets/Scripts/StoryController.cs" Line="82" Column="3" />
+      <File FileName="Assets/Scripts/BackToMenuScene.cs" Line="22" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WesternStory" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Assets" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="WeaponsController.cs" selected="True" />
+                <Node name="BackToMenuScene.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -26,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3fa195a1-585f-4c6c-8ce7-19a49c94731e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b2ed7165-1813-419a-af40-aafb8e8070eb" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
