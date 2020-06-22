@@ -15,7 +15,6 @@ public class WeaponFire : MonoBehaviour {
 
 	public GameObject playerAttack;
 
-	// TODO: temporary solution
 	public bool knife = false;
 
 	private bool weaponInCoolDown = false;
@@ -27,7 +26,6 @@ public class WeaponFire : MonoBehaviour {
 			if (InputManager.fire || Input.GetKey (KeyCode.LeftAlt)) {
 
 				if (PlayerInventory.Ammo == 0 && !knife) {
-					// TODO: knife equiped exception fix
 
 					if (weaponEmptyFX) weaponEmptyFX.Play ();
 

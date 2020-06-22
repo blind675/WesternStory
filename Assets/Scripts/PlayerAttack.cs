@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour {
 
-	// TODO: debug variables
+	// debug variables
 	public float targetDistance;
 
 	void Attack (object attackData)

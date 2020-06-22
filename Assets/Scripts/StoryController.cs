@@ -88,6 +88,11 @@ public class StoryController : MonoBehaviour {
 		}
 	}
 
+	public static string GetSceneName ()
+	{
+		return stroy.stroySteps [storyStepIndex].CurrentScene;
+	}
+
 	public static string GetTriggerNPCName ()
 	{
 		return stroy.stroySteps [storyStepIndex].NextStoryTrigger;

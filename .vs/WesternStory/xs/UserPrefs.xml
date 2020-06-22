@@ -1,9 +1,15 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BackToMenuScene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerAttack.cs">
     <Files>
       <File FileName="Assets/Scripts/PlayerHealth.cs" Line="28" Column="38" />
-      <File FileName="Assets/Scripts/StoryController.cs" Line="82" Column="3" />
-      <File FileName="Assets/Scripts/BackToMenuScene.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/StoryController.cs" />
+      <File FileName="Assets/Scripts/BackToMenuScene.cs" />
+      <File FileName="Assets/Scripts/Spawn.cs" />
+      <File FileName="Assets/Scripts/MenuController.cs" />
+      <File FileName="Assets/Scripts/UIController.cs" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="115" Column="1" />
+      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="8" Column="30" />
+      <File FileName="Assets/Scripts/WeaponFire.cs" Line="11" Column="32" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -11,7 +17,7 @@
           <Node name="WesternStory" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="BackToMenuScene.cs" selected="True" />
+                <Node name="PlayerAttack.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -21,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b2ed7165-1813-419a-af40-aafb8e8070eb" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f01acfaa-e76e-4311-be5a-b140753c0f05" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

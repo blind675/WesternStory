@@ -12,9 +12,14 @@ public class PlayerController : MonoBehaviour {
 	public GameObject infoText;
 	public StoryController storyController;
 
-	//public WeaponFire knifeUIObject;
-	//public WeaponFire gunUIObject;
-	//public WeaponFire doubleGunUIObject;
+	public GameObject doorImage;
+	public GameObject talkImage;
+	public GameObject buyImage;
+	public GameObject attackImage;
+
+	public WeaponFire knifeUIObject;
+	public WeaponFire gunUIObject;
+	public WeaponFire doubleGunUIObject;
 
 	// Player settings
 	public float moveSpeed;
@@ -48,6 +53,11 @@ public class PlayerController : MonoBehaviour {
 					infoText.GetComponent<Text> ().text = "You don't have enough Money";
 				}
 
+				attackImage.SetActive (false);
+				talkImage.SetActive (false);
+				doorImage.SetActive (false);
+				buyImage.SetActive (true);
+
 				//focusedEnemy = Shot.transform;
 				// nothing here WeaponFire will take care
 			} else if (Shot.transform.tag == "NPC" && targetDistance < maxInteractionDistance) {
@@ -65,6 +75,11 @@ public class PlayerController : MonoBehaviour {
 					interactionEnabled = true;
 				}
 
+				attackImage.SetActive (false);
+				talkImage.SetActive (true);
+				doorImage.SetActive (false);
+				buyImage.SetActive (false);
+
 			} else if (Shot.transform.tag == "Door" && targetDistance < maxInteractionDistance) {
 				infoText.SetActive (true);
 
@@ -78,11 +93,36 @@ public class PlayerController : MonoBehaviour {
 					infoText.GetComponent<Text> ().text = "Read Letter First";
 				}
 
+				attackImage.SetActive (false);
+				talkImage.SetActive (false);
+				doorImage.SetActive (true);
+				buyImage.SetActive (false);
+
+			} else if (Shot.transform.tag == "Enemy") {
+
+				float attackDistance = 0;
+
+				if (WeaponsController.isKnifeEquiped) attackDistance = knifeUIObject.maxAttackDistance;
+				if (WeaponsController.isGunEquiped) attackDistance = gunUIObject.maxAttackDistance;
+				if (WeaponsController.isDoubleGunEquiped) attackDistance = doubleGunUIObject.maxAttackDistance;
+
+				if (targetDistance < attackDistance) {
+					attackImage.SetActive (true);
+					talkImage.SetActive (false);
+					doorImage.SetActive (false);
+					buyImage.SetActive (false);
+				}
+
 			} else {
 				infoText.SetActive (false);
 				focusedDoor = null;
 				focusedNPC = null;
 				interactionEnabled = false;
+
+				attackImage.SetActive (false);
+				talkImage.SetActive (false);
+				doorImage.SetActive (false);
+				buyImage.SetActive (false);
 			}
 		}
 

@@ -17,10 +17,9 @@ public class BackToMenuScene : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (sceneDelay);
 
-		// TODO: chenge to menu scene
 		StoryController.storyStepIndex = 0;
 
-		SceneManager.LoadScene ("TownScene");
+		SceneManager.LoadScene ("MenuScene");
 
 	}
 }

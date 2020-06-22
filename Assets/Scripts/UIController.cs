@@ -12,10 +12,20 @@ public class UIController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		// TODO: set scene name correct
-		LocationText.text = "Town";
+		LocationText.text = GetLocationFromScene ();
 		MoneyText.text = "$" + PlayerInventory.Money;
 		HealthText.text = "" + PlayerHealth.Health + "%";
 		AmmoText.text = "" + PlayerInventory.Ammo;
+	}
+
+	private string GetLocationFromScene ()
+	{
+		if (StoryController.GetSceneName () == "TownScene") {
+			return "Town";
+		} else if (StoryController.GetSceneName () == "BanditScene") {
+			return "Bandit Camp";
+		} else {
+			return "Bear Cave";
+		}
 	}
 }
