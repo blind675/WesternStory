@@ -33,15 +33,15 @@ public class Spawn : MonoBehaviour {
 
 		if (fTimer <= 0) {
 
-			float zPos = v3SpawnPosJitter.z * (Random.value);
+			float xPos = v3SpawnPosJitter.x * (Random.value);
 
-			while (fzMin > zPos && fzMax < zPos) zPos = v3SpawnPosJitter.z * (Random.value);
+			while (fzMin < xPos && fzMax > xPos) xPos = v3SpawnPosJitter.x * (Random.value);
 
 			fTimer = fTimeIntervals;
 			Vector3 v3SpawnPos = transform.position;
-			v3SpawnPos += Vector3.right * v3SpawnPosJitter.x * (Random.value - 0.5f); ;
+			v3SpawnPos += Vector3.right * xPos * -1;
 			v3SpawnPos += Vector3.forward * v3SpawnPosJitter.z * (Random.value - 0.5f);
-			v3SpawnPos += Vector3.up * zPos;
+			v3SpawnPos += Vector3.up * v3SpawnPosJitter.y * (Random.value);
 
 			Instantiate (goCreate, v3SpawnPos, Quaternion.identity);
 		}

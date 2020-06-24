@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 731263711}
   - component: {fileID: 731263710}
   m_Layer: 0
-  m_Name: Rednex - Cotton Eye Joe (Official Music Video) [HD] - RednexMusic com
+  m_Name: GameOverMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,9 +389,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8e28b2ba6da2045aa9e98c3d21e10f03, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f55d2c0d766d94a8e953cca31f1fde26, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.64
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -404,7 +404,7 @@ AudioSource:
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
-  BypassListenerEffects: 0
+  BypassListenerEffects: 1
   BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c6a70df3cccc42479ddb8582debc4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneDelay: 6
+  sceneDelay: 3
 --- !u!1 &1326009055
 GameObject:
   m_ObjectHideFlags: 0
