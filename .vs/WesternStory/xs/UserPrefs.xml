@@ -1,15 +1,8 @@
 ﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spawn.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LeaveScene.cs">
     <Files>
-      <File FileName="Assets/Scripts/PlayerHealth.cs" Line="28" Column="38" />
-      <File FileName="Assets/Scripts/StoryController.cs" />
-      <File FileName="Assets/Scripts/BackToMenuScene.cs" />
-      <File FileName="Assets/Scripts/Spawn.cs" Line="38" Column="34" />
-      <File FileName="Assets/Scripts/MenuController.cs" />
-      <File FileName="Assets/Scripts/UIController.cs" />
-      <File FileName="Assets/Scripts/PlayerController.cs" />
-      <File FileName="Assets/Scripts/PlayerAttack.cs" Line="8" Column="30" />
-      <File FileName="Assets/Scripts/WeaponFire.cs" />
+      <File FileName="Assets/Scripts/LeaveScene.cs" Line="23" Column="30" />
+      <File FileName="Assets/Scripts/InputManager.cs" Line="11" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,7 +10,7 @@
           <Node name="WesternStory" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="Spawn.cs" selected="True" />
+                <Node name="LeaveScene.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -27,7 +20,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f01acfaa-e76e-4311-be5a-b140753c0f05" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="743a53bc-26b2-4b1c-a6c5-b715eb78b5bd" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
