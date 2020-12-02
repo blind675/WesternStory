@@ -28,16 +28,17 @@ public class LeaveScene : MonoBehaviour {
 				infoText.GetComponent<Text> ().color = Color.red;
 			}
 		} else {
+
 			infoText.SetActive (true);
 			infoText.GetComponent<Text> ().text = "Don't leave Town without a weapon!";
 			infoText.GetComponent<Text> ().color = Color.red;
 		}
-		// if can change scene do it
-		// if storry 
+
 	}
 
 	private void OnTriggerExit (Collider other)
 	{
+
 		infoText.SetActive (false);
 	}
 }

@@ -1,16 +1,23 @@
-﻿<Properties StartupConfiguration="{3C9636BA-DACD-5903-5B0E-7C9B2A622CC3}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LeaveScene.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC.cs">
     <Files>
-      <File FileName="Assets/Scripts/LeaveScene.cs" Line="23" Column="30" />
-      <File FileName="Assets/Scripts/InputManager.cs" Line="11" Column="26" />
+      <File FileName="Assets/Scripts/LeaveScene.cs" Line="45" Column="32" />
+      <File FileName="Assets/Scripts/InputManager.cs" />
+      <File FileName="Assets/Scripts/StoryController.cs" Line="286" Column="19" />
+      <File FileName="Assets/Scripts/Door.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/UIController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/MenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NPC.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="WesternStory" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True">
-                <Node name="LeaveScene.cs" selected="True" />
+            <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Assets" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="NPC.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
@@ -20,7 +27,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="743a53bc-26b2-4b1c-a6c5-b715eb78b5bd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="fb7320d9-cd3e-426a-8ab1-8cbd3ab0933f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
